@@ -1,2 +1,4 @@
-<app-home></app-home>
+<app-home *ngIf="showHome"></app-home>
+<app-login *ngIf="showLogin"></app-login>
+
 <router-outlet></router-outlet>
