@@ -37,6 +37,7 @@
 
     //set the customer session id - CSID
     setCustomerSessionId: function (csid) {
+      console.log('success')
       window.postMessage(
         { type: 'cdSetCsid', csid: csid },
         window.location.href
