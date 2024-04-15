@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/scripts/biocatch.js"
+              "src/assets/js/biocatch.js"
             ]
           },
           "configurations": {
