@@ -1,4 +1,5 @@
 import { Component  } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { Utils } from '../utils/utils'; 
 
@@ -11,7 +12,7 @@ export class LoginComponent {
   form: FormGroup;
 
     constructor(
-      private formBuilder: FormBuilder, private utils: Utils) { 
+      private formBuilder: FormBuilder, private utils: Utils, private router: Router) {
         this.form = this.formBuilder.group({
           name: '',
         })
@@ -26,6 +27,6 @@ export class LoginComponent {
 
   onSubmit() {
     this.utils.setCustomerSessionId(this.utils.randomString(6, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
-    this.form.reset()
+    this.router.navigate(['pay']);
   }
 }

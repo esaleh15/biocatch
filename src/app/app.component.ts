@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'biocatch-app-test';
   showHome: boolean = true;
   showLogin: boolean = false;
+  showPay: boolean = false;
 
   constructor(private router: Router){
     router.events.subscribe((val) => {
@@ -18,6 +19,8 @@ export class AppComponent {
         if (val.url == '/') {
           this.showHome = true;
           this.showLogin = false;
+        } else if(val.url == '/pay') {
+            this.showHome = false;
         } else {
           this.showHome = false;
         }
