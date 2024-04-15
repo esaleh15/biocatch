@@ -2,7 +2,7 @@ export class Utils {
 	constructor() {}
 
   	setCustomerSessionId(csid: string) {
-  		console.log('csid', csid)
+      console.log('**** Setting CSID - Storing to localStorage *****', csid)
   		localStorage.setItem("cdSetCsid", csid);
     }
 

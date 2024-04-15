@@ -19,10 +19,14 @@ export class AppComponent {
         if (val.url == '/') {
           this.showHome = true;
           this.showLogin = false;
+          this.showPay = false
         } else if(val.url == '/pay') {
+            this.showPay = true;
             this.showHome = false;
+            this.showLogin = false;
         } else {
           this.showHome = false;
+          this.showPay = false
         }
       }
     })
