@@ -1,6 +1,6 @@
 /* dd: 2024-03-04__09-18-39 */
 !(function (e) {
-  console.log('***** Task 1 - Loaded Biocatch JS *****')
+  console.log('***** Loaded Biocatch JS *****')
   'use strict';
 
   self.cdApi = {

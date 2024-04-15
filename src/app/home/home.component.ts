@@ -10,6 +10,7 @@ import { NavigationExtras, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   loggedIn: boolean
    constructor(private router: Router) {
+    console.log('Loading pageContext: Home')
     this.loggedIn = false;
    }
 

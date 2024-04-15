@@ -16,6 +16,7 @@ export class LoginComponent {
         this.form = this.formBuilder.group({
           name: '',
         })
+        console.log('Loading pageContext: Login')
       }
 
   submitted: boolean = false;

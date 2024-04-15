@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PayComponent {
 
+  constructor() {
+    console.log('Loading pageContext: Pay')
+   }
+
 }
