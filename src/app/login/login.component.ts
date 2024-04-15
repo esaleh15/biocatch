@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { Component  } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, FormGroup } from '@angular/forms';
 
-// import { biocatch } from "../../scripts/biocatch";
 
 @Component({
   selector: 'app-login',
@@ -9,11 +8,13 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  form: FormGroup;
 
     constructor(
-    private formBuilder: FormBuilder,
-  ) {}
+      private formBuilder: FormBuilder
+    ) { this.form = this.formBuilder.group({
+      name: '',
+    })}
 
   submitted: boolean = false;
 
@@ -22,9 +23,7 @@ export class LoginComponent {
     this.submitted = true;
   }
 
-  onSubmit(): void {
-    console.log('ddd')
-    setCustomerSessionId('test')
-    // this.loginForm.reset();
+  onSubmit() {
+
   }
 }
